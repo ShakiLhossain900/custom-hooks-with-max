@@ -13,7 +13,7 @@ const useCounter = (forwords = true) => {
         else{
           setCounter((prevCounter) => prevCounter-1)
         }
-      }, 500);
+      }, 100);
   
       return () => clearInterval(interval);
     }, [forwords]);
