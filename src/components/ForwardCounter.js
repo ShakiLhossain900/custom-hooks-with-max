@@ -8,7 +8,7 @@ const ForwardCounter = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCounter((prevCounter) => prevCounter + 1);
-    }, 1000);
+    }, 2000);
 
     return () => clearInterval(interval);
   }, []);
