@@ -1,20 +1,23 @@
-import React,{useState,useEffect} from 'react';
+import {useState,useEffect} from 'react';
 
-const useCounter = () => {
+const useCounter = (forwords = true) => {
     const [counter, setCounter] = useState(0);
 
     useEffect(() => {
       const interval = setInterval(() => {
-        setCounter((prevCounter) => prevCounter + 1);
-      }, 2000);
+
+        if(forwords){
+          
+          setCounter((prevCounter) => prevCounter + 1);
+        }
+        else{
+          setCounter((prevCounter) => prevCounter-1)
+        }
+      }, 500);
   
       return () => clearInterval(interval);
-    }, []);
-    return (
-        <div>
-            
-        </div>
-    );
+    }, [forwords]);
+    return counter;
 };
 
 export default useCounter;
