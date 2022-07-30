@@ -13,6 +13,9 @@ const BackwardCounter = () => {
     return () => clearInterval(interval);
   }, []);
 
+
+  
+
   return <Card>{counter}</Card>;
 };
 
